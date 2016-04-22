@@ -5,7 +5,7 @@ def random_word
   letters[0,rand(3..8)].join
 end
 
-100.times do
+5.times do
   Child.create!(
     first_name:     random_word,
     last_name:      random_word,

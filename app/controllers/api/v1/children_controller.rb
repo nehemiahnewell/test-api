@@ -33,6 +33,11 @@ class Api::V1::ChildrenController < Api::V1::BaseController
   
   def what
     child = Child.find(params[:id])
+    if !(child.nil?)
+      render json: {message: "what", status: 200}, status: 200
+    else
+      render json: {message: "what", status: 400}, status: 400
+    end
   end
   
   private

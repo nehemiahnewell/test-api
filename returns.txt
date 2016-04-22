@@ -1,0 +1,19 @@
+curl -X GET https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children
+
+[{"id":1,"first_name":"iqed","last_name":"udtz","age":15,"date_of_birth":"2004-10-03T21:14:00.029Z","created_at":"2016-04-22T05:54:07.039Z","updated_at":"2016-04-22T05:54:07.039Z"},
+{"id":2,"first_name":"upqvy","last_name":"bokj","age":10,"date_of_birth":"2004-04-03T04:25:22.064Z","created_at":"2016-04-22T05:54:07.065Z","updated_at":"2016-04-22T05:54:07.065Z"},
+{"id":3,"first_name":"ruaidw","last_name":"bojqhgn","age":9,"date_of_birth":"2010-11-28T09:08:15.076Z","created_at":"2016-04-22T05:54:07.077Z","updated_at":"2016-04-22T05:54:07.077Z"},
+{"id":4,"first_name":"wqdpuha","last_name":"zofhsx","age":10,"date_of_birth":"2014-04-11T01:00:46.089Z","created_at":"2016-04-22T05:54:07.090Z","updated_at":"2016-04-22T05:54:07.090Z"},
+{"id":5,"first_name":"qmc","last_name":"gwbiksle","age":16,"date_of_birth":"2007-09-01T07:54:59.101Z","created_at":"2016-04-22T05:54:07.102Z","updated_at":"2016-04-22T05:54:07.102Z"}]
+
+curl -X GET https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/1
+
+{"id":1,"first_name":"iqed","last_name":"udtz","age":15,"date_of_birth":"2004-10-03T21:14:00.029Z","created_at":"2016-04-22T05:54:07.039Z","updated_at":"2016-04-22T05:54:07.039Z"}
+
+curl -X DELETE https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/1
+
+{"message":"Child destroyed","status":200}
+
+curl -H "Content-type: application/json" -X POST -d '{"child": {"first_name":"Pam", "last_name":"Poovey",  "age":"16", "date_of_birth":"2007-09-01T07:54:59.101Z"}}' https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children
+
+{"id":6,"first_name":"Pam","last_name":"Poovey","age":16,"date_of_birth":"2007-09-01T07:54:59.101Z","created_at":"2016-04-22T06:04:56.618Z","updated_at":"2016-04-22T06:04:56.618Z"}
