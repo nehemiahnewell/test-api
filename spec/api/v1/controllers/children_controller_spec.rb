@@ -24,14 +24,9 @@ RSpec.describe Api::V1::ChildrenController, type: :controller do
       expect(response).to have_http_status(200)
     end
     
-    it "POST what returns http success" do
-      post :what, id: my_child.id
+    it "POST update returns http success" do
+      post :update, id: my_child.id, child: {first_name: "John", last_name: "Stwert", age: @age, date_of_birth: @dob }
       expect(response).to have_http_status(200)
     end
-
-    # it "POST update returns http success" do
-    #   post :update, id: my_child.id, child: {first_name: "John", last_name: "Stwert", age: @age, date_of_birth: @dob }
-    #   expect(response).to have_http_status(200)
-    # end
   end
 end

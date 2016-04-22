@@ -31,24 +31,15 @@ class Api::V1::ChildrenController < Api::V1::BaseController
     end
   end
   
-  def what
+  def update
     child = Child.find(params[:id])
-    if !(child.nil?)
+ 
+    if child.update_attributes(child_params)
       render json: {success: true}, status: 200
     else
       render json: {success: false}, status: 400
     end
   end
-
-  # def update
-  #   child = Child.find(params[:id])
- 
-  #   if child.update_attributes(child_params)
-  #     render json: {success: true}, status: 200
-  #   else
-  #     render json: {success: false}, status: 400
-  #   end
-  # end
   
   private
   

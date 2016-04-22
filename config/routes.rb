@@ -6,8 +6,7 @@ Rails.application.routes.draw do
       post '/children' => 'children#create', as: :post
       get  '/children/:id' => 'children#show', as: :show
       delete '/children/:id' =>'children#destroy', as: :destroy
-      post '/children/:id' => 'children#what', as: :what
-      # put '/children/:id' => 'children#update', as: :update
+      put '/children/:id' => 'children#update', as: :update
     end
   end
 end
