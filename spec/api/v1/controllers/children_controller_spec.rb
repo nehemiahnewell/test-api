@@ -13,7 +13,6 @@ RSpec.describe Api::V1::ChildrenController, type: :controller do
       get :show, id: my_child.id
       expect(response).to have_http_status(:success)
     end
-    
 
     it "POST create returns http success" do
       post :create, child: {first_name: "John", last_name: "Stwert", age: @age, date_of_birth: @dob }
@@ -29,5 +28,10 @@ RSpec.describe Api::V1::ChildrenController, type: :controller do
       post :what, id: my_child.id
       expect(response).to have_http_status(200)
     end
+
+    # it "POST update returns http success" do
+    #   post :update, id: my_child.id, child: {first_name: "John", last_name: "Stwert", age: @age, date_of_birth: @dob }
+    #   expect(response).to have_http_status(200)
+    # end
   end
 end

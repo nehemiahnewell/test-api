@@ -10,10 +10,13 @@ curl -X GET https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/1
 
 {"id":1,"first_name":"iqed","last_name":"udtz","age":15,"date_of_birth":"2004-10-03T21:14:00.029Z","created_at":"2016-04-22T05:54:07.039Z","updated_at":"2016-04-22T05:54:07.039Z"}
 
-curl -X DELETE https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/1
-
-{"message":"Child destroyed","status":200}
+curl -X DELETE https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/2
+{"success":true}
 
 curl -H "Content-type: application/json" -X POST -d '{"child": {"first_name":"Pam", "last_name":"Poovey",  "age":"16", "date_of_birth":"2007-09-01T07:54:59.101Z"}}' https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children
 
 {"id":6,"first_name":"Pam","last_name":"Poovey","age":16,"date_of_birth":"2007-09-01T07:54:59.101Z","created_at":"2016-04-22T06:04:56.618Z","updated_at":"2016-04-22T06:04:56.618Z"}
+
+#curl -H "Content-type: application/json" -X PUT -d '{"child": {"first_name":"Pam", "last_name":"Poovey",  "age":"16", "date_of_birth":"2007-09-01T07:54:59.101Z"}}' https://bloc-foundation-nehemiahnewell.c9users.io/api/v1/children/3
+#
+#{"success":true}

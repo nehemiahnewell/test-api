@@ -25,20 +25,30 @@ class Api::V1::ChildrenController < Api::V1::BaseController
     child = Child.find(params[:id])
  
     if child.destroy
-      render json: {message: "Child destroyed", status: 200}, status: 200
+      render json: {success: true}, status: 200
     else
-      render json: {error: "Child destroy failed", status: 400}, status: 400
+      render json: {success: false}, status: 400
     end
   end
   
   def what
     child = Child.find(params[:id])
     if !(child.nil?)
-      render json: {message: "what", status: 200}, status: 200
+      render json: {success: true}, status: 200
     else
-      render json: {message: "what", status: 400}, status: 400
+      render json: {success: false}, status: 400
     end
   end
+
+  # def update
+  #   child = Child.find(params[:id])
+ 
+  #   if child.update_attributes(child_params)
+  #     render json: {success: true}, status: 200
+  #   else
+  #     render json: {success: false}, status: 400
+  #   end
+  # end
   
   private
   
